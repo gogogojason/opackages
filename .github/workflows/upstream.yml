@@ -324,10 +324,7 @@ jobs:
             echo "wait"
           sleep 1
         done
-        
-    
-    - name: Apply diy
-      run: |    
+        #-----------------------------------------------
         date1=`date +%Y.%m.%d`
         sed -i "/DISTRIB_DESCRIPTION/c\DISTRIB_DESCRIPTION=\"hfy166 D$date1'\"" base-files/files/etc/openwrt_release
         sed -i "s/192.168.1.1/192.168.2.1/g" base-files/files/bin/config_generate
